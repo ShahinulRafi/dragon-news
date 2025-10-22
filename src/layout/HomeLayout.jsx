@@ -1,13 +1,18 @@
 import React from 'react';
 import { Outlet } from 'react-router';
 import Header from '../componentts/Header/Header';
+import LatestNews from '../componentts/LatestNews/LatestNews';
 
 const HomeLayout = () => {
     return (
         <div>
-            <header><Header></Header></header>
+            <header>
+                <Header></Header>
+                <section className='w-11/12 mx-auto my-3'>
+                    <LatestNews></LatestNews>
+                </section>
+            </header>
             <main>
-                {/* <button className='btn btn-primary'>Click me</button> */}
                 <section className='left-nav'></section>
                 <section className='main'>
                     <Outlet></Outlet>
